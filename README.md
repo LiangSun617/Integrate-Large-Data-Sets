@@ -22,7 +22,7 @@ This is my report of introducing and sharing my experience in dealing with large
   + Example 1: PSID + NCDB
   + Example 2: PSID + IPEDS
   + Example 3: PSID + Crosswalk + NCDB
-  
+
 ---
 
 ### 1. Understand the structure of your data
@@ -109,7 +109,7 @@ This is my report of introducing and sharing my experience in dealing with large
 
    + Read README files and codebook  
 
-    ![pic](1.jpg)
+    ![pic](/images/1.jpg)
 
 
 
@@ -120,18 +120,18 @@ This is my report of introducing and sharing my experience in dealing with large
 
 To get the variables, you can browse online codebook which organizes variables by topic and year:
 
-   ![pic3](3.png)
+   ![pic3](/images/3.png)
 
 You can also search variables directly in the database:
 
-   ![pic2](2.jpg)
+   ![pic2](/images/2.jpg)
 
 
    + Find unique ID that can be used to link files of different levels
 
         Variables may be coded differently in files of different levels, but they are very important for merging data. In PSID data, the key variable that links family and individual files is family interview number, which is coded differently not only across files, but also across years.
 
-   ![pic4](4.jpg)
+   ![pic4](/images/4.jpg)
 
     In the process, I renamed these variables into ID1968, ID1969,...,and so on, in both family and individual files.
 
@@ -140,7 +140,7 @@ You can also search variables directly in the database:
 
         Again, the name of all variables in yearly files changes over time. It will be helpful if you can make a variable list on your own to record variable names of each year:
 
-    ![pic5](5.jpg)
+    ![pic5](/images/5.jpg)
 
 ####  Merge files
 
@@ -149,7 +149,7 @@ You can also search variables directly in the database:
 
 + Master data and using data
 
-     ![pic](6.jpg)
+     ![pic](/images/6.jpg)
 
   Here I use family data file "FAM2013" as master data, and individual file "IND" as using data, and merge them on ID2013.
 
@@ -157,13 +157,13 @@ You can also search variables directly in the database:
 
    Note that you may need to specify the relationship between two files on the key variable (depending on which version of Stata you are using). Is it one-to-one, one-to-multiple, or multiple-to-multiple relationship? In my case, I can also merge using m:1 by just switching master and using data:
 
-   ![pic](7.jpg)
+   ![pic](/images/7.jpg)
 
 + Check "_merge"
 
    One thing I always do after merging is to check the system-generating variable "_merge" which reports how many observations are successfully merged and how many were not, and if not, which data file are they from.
 
-   ![pic](8.jpg)
+   ![pic](/images/8.jpg)
 
 #### Append files
 
@@ -171,53 +171,53 @@ You can also search variables directly in the database:
 
 + Example 1: two completely different files (no overlapping values for all variables)
 
-  ![pic](9.jpg)
+  ![pic](/images/9.jpg)
 
-  ![pic](10.jpg)
+  ![pic](/images/10.jpg)
 
-  ![pic](11.jpg)
+  ![pic](/images/11.jpg)
 
    If we merge these two files:
 
-   ![pic](12.jpg)
+   ![pic](/images/12.jpg)
 
-   ![pic](13.jpg)
+   ![pic](/images/13.jpg)
 
   We can see that "append" and "merge" seem to produce the same results; however, they are two different processes and "merge" created one more system variable "_merge".
 
 + Example 2: two files with overlapping ID values
 
-  ![pic](14.jpg)
+  ![pic](/images/14.jpg)
 
-  ![pic](15.jpg)
+  ![pic](/images/15.jpg)
 
-  ![pic](16.jpg)
+  ![pic](/images/16.jpg)
 
 If merge them:
 
- ![pic](17.jpg)
+ ![pic](/images/17.jpg)
 
- ![pic](18.jpg)
+ ![pic](/images/18.jpg)
 
 Here, "merge" shows a much different result than "append", because when there is overlapping value for the key variable, "merge" will identify the common IDs. In this example, both files have ID 1,2,3,4. "Append" does not recognize the ID 1-4 in master data and using data as the same, and keep them separated in the result, while "merge" matches observations with these IDs and IDs remain unique after merging.
 
 + Two data files with overlapping values for ID variable and common variables
 
-![pic](19.jpg)
+![pic](/images/19.jpg)
 
-![pic](20.jpg)
+![pic](/images/20.jpg)
 
-![pic](21.jpg)
+![pic](/images/21.jpg)
 
   If we merge them:
 
-  ![pic](22.jpg)
+  ![pic](/images/22.jpg)
 
   We can see that "append" keeps all values from both master and using data, while "merge" only keeps the values of "odd" from the master data. This is because both files here have common IDs 1,2,3,4 and they both have a variable called "odd", so by merging the program has to decide from which side IDs 1-4 should take the value of "odd". In this case, the program always keeps the values from master data, which are 13,15,17,19 here.  
 
 Once you get family and individual data files merged, you will get an individual-level data with unique observations which have characteristics from both files:
 
- ![pic](23.png)
+ ![pic](/images/23.png)
 
 ----
 
@@ -258,15 +258,15 @@ Through research, we decide to link two external data sets to PSID:
 
  Command to convert format:
 
- ![pic](24.jpg)
+ ![pic](/images/24.jpg)
 
  Long format:
 
- ![pic](25.jpg)
+ ![pic](/images/25.jpg)
 
  wide format:
 
- ![pic](26.jpg)
+ ![pic](/images/26.jpg)
 
  In long format, there are multiple records for each ID, which means ID cannot uniquely identify a unit. In NCDB, the unit of analysis is CBSA area,and for each CBSA area, there are two records, one for 2009 and one for 2010.
  In wide format, each CBSA area has only one record, with variables being named XX2009, XX2010.
@@ -290,7 +290,7 @@ Through research, we decide to link two external data sets to PSID:
 
     Long format:
 
-    ![pic](27.jpg)
+    ![pic](/images/27.jpg)
 
   Codes:
 
@@ -309,7 +309,7 @@ Through research, we decide to link two external data sets to PSID:
 
  Wide format:
 
- ![pic](28.jpg)
+ ![pic](/images/28.jpg)
 
 #### Example 3: PSID + crosswalk + NCDB
 
@@ -317,7 +317,7 @@ Sometimes, it may be hard to find any key variable between two data sets. For ex
 
 One thing I found is that PSID also has FIPS codes, which are based on state code and county code. In such case, we can make and use a crosswalk file like this:
 
-![pic](29.jpg)
+![pic](/images/29.jpg)
 
 We can convert the FIPS codes into CBSA in PSID file and then merge with NCDB on CBSA.
 
