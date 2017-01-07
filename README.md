@@ -22,6 +22,7 @@ This is my report of introducing and sharing my experience in dealing with large
   + Example 1: PSID + NCDB
   + Example 2: PSID + IPEDS
   + Example 3: PSID + Crosswalk + NCDB
+  
 ---
 
 ### 1. Understand the structure of your data
