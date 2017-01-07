@@ -6,6 +6,9 @@
 
 This is my report of introducing and sharing my experience in dealing with large data sets at a student workshop at Penn State.  
 
+
+#### All the data shown here are from public database, or fabricated for illustration purpose. No restricted data are leaked.
+
 ---
 
 #### Outline
