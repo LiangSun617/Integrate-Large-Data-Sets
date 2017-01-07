@@ -265,11 +265,11 @@ Through research, we decide to link two external data sets to PSID:
 
  Long format:
 
- ![pic](/images/25.jpg)
+ ![pic](/images/25.png)
 
  wide format:
 
- ![pic](/images/26.jpg)
+ ![pic](/images/26.png)
 
  In long format, there are multiple records for each ID, which means ID cannot uniquely identify a unit. In NCDB, the unit of analysis is CBSA area,and for each CBSA area, there are two records, one for 2009 and one for 2010.
  In wide format, each CBSA area has only one record, with variables being named XX2009, XX2010.
