@@ -289,7 +289,7 @@ Through research, we decide to link two external data sets to PSID:
 
          + IPEDS is institutional-level and long format
 
-+ Convert PSID from long format into wide format
++ Convert IPEDS from long format into wide format
 
     Long format:
 
@@ -340,9 +340,11 @@ In fact, FIPS codes have broader coverage than CBSA codes do in geography, becau
     http://county-codes.findthedata.com/
 
 
-+ PSID https://psidonline.isr.umich.edu/
++ IPEDS https://nces.ed.gov/ipeds/
 
 + IPUMS: Integrated Public Use Microdata Series    https://usa.ipums.org/usa/
+
++ PSID https://psidonline.isr.umich.edu/
 
 + NCDB: Neighborhood Change Database   http://www.geolytics.com/USCensus,Neighborhood-Change-Database-1970-2000,Products.asp
 
