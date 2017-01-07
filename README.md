@@ -4,13 +4,24 @@
 #### Liang Sun
 #### October 15, 2016
 
-This is a report of introducing and sharing my experience in dealing with large data sets for a student workshop at Penn State.  
+This is my report of introducing and sharing my experience in dealing with large data sets at a student workshop at Penn State.  
+
+---
 
 #### Outline
 + Understand the structure of your data
+  + Two things: time and level
+  + Example: PSID data
 + How to aggregate data of different levels
+  + Research question
+  + Read README
+  + Find unique ID or key variables
+  + Note time-variant variables
+  + Merge and append files
 + How to aggregate data from different sources
-
+  + Example 1: PSID + NCDB
+  + Example 2: PSID + IPEDS
+  + Example 3: PSID + Crosswalk + NCDB
 ---
 
 ### 1. Understand the structure of your data
