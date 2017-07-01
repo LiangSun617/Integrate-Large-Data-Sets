@@ -112,7 +112,7 @@ This is my report of introducing and sharing my experience in dealing with large
 
    + Read README files and codebook  
 
-    ![pic1](images/1.jpg)
+    ![pic1](/images/1.jpg)
 
 
 
