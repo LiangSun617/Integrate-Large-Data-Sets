@@ -112,7 +112,7 @@ This is my report of introducing and sharing my experience in dealing with large
 
    + Read README files and codebook  
 
-    ![pic1](/images/1.jpg)
+    ![pic1](/images/1.png)
 
 
 
@@ -143,7 +143,7 @@ You can also search variables directly in the database:
 
         Again, the name of all variables in yearly files changes over time. It will be helpful if you can make a variable list on your own to record variable names of each year:
 
-    ![pic5](/images/5.jpg)
+    ![pic5](/images/5.png)
 
 ####  Merge files
 
