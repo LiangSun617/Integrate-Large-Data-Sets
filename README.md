@@ -112,7 +112,7 @@ This is my report of introducing and sharing my experience in dealing with large
 
    + Read README files and codebook  
 
-    ![pic](/images/1.jpg)
+    ![pic1](/images/1.jpg)
 
 
 
@@ -152,7 +152,7 @@ You can also search variables directly in the database:
 
 + Master data and using data
 
-     ![pic](/images/6.jpg)
+     ![pic6](/images/6.jpg)
 
   Here I use family data file "FAM2013" as master data, and individual file "IND" as using data, and merge them on ID2013.
 
